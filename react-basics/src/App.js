@@ -1,17 +1,18 @@
-import SubjectList from './SubjectList'
-
+import SubjectList from "./SubjectList";
+import Counter from "./Counter";
+import React from "react";
+import TempConverter from "./TempConverter";
 
 function App() {
   return (
     <div>
-        <SubjectList data={CMSCSubjects} title={'Computer Science Subjects'} />
-        <SubjectList data={CHEMSubjects} title={'Chemistry'} />
+      <SubjectList list={CMSCSubjects} title={'Computer Science Subjects'} />
+      <SubjectList list={CHEMSubjects} title={'Chem Subjects'} />
+      <Counter val={10} />
+      <TempConverter />
     </div>
   );
 }
-
-export default App;
-
 const CMSCSubjects = [
   { code: "CMSC100", description: "Web Programming", id: 1 },
   { code: "CMSC150", description: "Scientific Computation", id: 2 },
@@ -23,3 +24,4 @@ const CHEMSubjects = [
   { code: "CHEM10", description: "Chemical Kinetics", id: 2 },
   { code: "CHEM11", description: "Introduction to Biochemistry", id: 3 },
 ];
+export default App;
